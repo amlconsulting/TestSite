@@ -7,6 +7,7 @@ These installation instructions are assuming you already have Node.js installed.
 To install this website:
 
 On Windows:
+
 1. Open `cmd.exe`
 
 2. Navigate to the folder to install project: 
@@ -18,14 +19,11 @@ On Windows:
 4. Navigate into cloned directory: 
 >`cd TestSite`
 
-5. Install package dependencies: 
+5. Install package dependencies: This will install everything you need to use the application as is. 
 >`npm install`. 
-This will install everything you need to use the application as is.
 
-6. Use Gulp to compile SASS and TypeScript, and create a buildable release. Just type: 
+6. Use Gulp to compile SASS and TypeScript, and create a buildable release. This will use BrowserSync to open your browser for site review. Using BrowserSync will allow you to make changes to your .scss, .ts, and .html files, and the browser will automatically update. To exit gulp and shut down the BrowserSync connection, type Ctrl+C to exit.
 >`gulp`
-
-This will use BrowserSync to open your browser for site review. Using BrowserSync will allow you to make changes to your .scss, .ts, and .html files, and the browser will automatically update. To exit gulp and shut down the BrowserSync connection, type Ctrl+C to exit.
 
 7. To deploy to IIS:
 
