@@ -5,3 +5,14 @@ body {
 	background-color: $background-color;
 	font-family: $font-family;
 }
+
+.div-with-border {
+    border: 2px solid;
+    border-radius: 25px;
+    height: 20px;
+    width: 100px;
+    display: flex;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+}

@@ -19,4 +19,4 @@ var user = new Student("Jane", "M.", "User");
 
 $('#greeting').append(greeter(user));
 
-$('#additional_info').append("Your full name is " + user.fullName);
+$('#additional-info').append("Your full name is " + user.fullName);

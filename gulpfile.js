@@ -3,13 +3,18 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     sass = require('gulp-ruby-sass'),
     ts = require('gulp-typescript'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create()
+    autoprefixer = require('gulp-autoprefixer');
 
 //Compile and Minify SASS/CSS
 gulp.task('compile-minify-scss', function () {
     return sass('app/scss/**/*.scss', {
         style: 'compressed'
     })
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
     .pipe(gulp.dest('build/Release/css'))
     .pipe(browserSync.stream());
 });
