@@ -36,7 +36,7 @@ gulp.task('compile-typescript', function () {
 //Copy Pages
 gulp.task('copy-pages', function () {
 	gulp.src('app/pages/**/*html')
-		.pipe(gulp.dest('build/Release');
+		.pipe(gulp.dest('build/Release'));
 });
 
 //Serve the content
