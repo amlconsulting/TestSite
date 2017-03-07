@@ -10,7 +10,7 @@ On Windows:
 
 1. Open `cmd.exe`
 
-2. Navigate to the folder to install project: 
+2. Navigate to the folder to install project (username is your username. This directory can be whatever you want): 
 >`cd C:\Users\{username}\Documents\Projects`
 
 3. Clone the git repository: 
@@ -27,12 +27,9 @@ On Windows:
 
 7. To deploy to IIS:
 
-a. Open ISS and create a new site, and point the application directory to your projects `build/Release` folder. 
+1. Open ISS and create a new site, and point the application directory to your projects `build/Release` folder. 
 
-b. Go back to your command prompt and type: 
-
+2. Go back to your command prompt and type the following to deploy site to IIS.: 
 >`gulp deploy-to-iis` 
 
-Your site will be deployed to IIS.
-
-c. Open your browser and navigate to your site's URL (whatever you created it IIS) and the site should open up.    
+3. Open your browser and navigate to your site's URL (whatever you created it IIS) and the site should open up.    
