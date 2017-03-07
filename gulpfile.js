@@ -4,17 +4,20 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     ts = require('gulp-typescript'),
     browserSync = require('browser-sync').create()
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    sourcemaps = require('gulp-sourcemaps');
 
 //Compile and Minify SASS/CSS
 gulp.task('compile-minify-scss', function () {
     return sass('app/scss/**/*.scss', {
         style: 'compressed'
     })
+    .pipe(sourcemaps.init())
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
     }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/Release/css'))
     .pipe(browserSync.stream());
 });

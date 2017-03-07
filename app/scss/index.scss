@@ -7,8 +7,11 @@ body {
 }
 
 .div-with-border {
-    border: 2px solid;
-    border-radius: 25px;
+    border: 1px solid;
+    border-radius: 15px;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px;
     height: 20px;
     width: 100px;
     display: flex;
