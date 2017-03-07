@@ -77,7 +77,7 @@ gulp.task('deploy-to-iis', [
         'minify-js', 
         'compile-typescript', 
         'copy-pages'
-    ],function () {
+    ], function () {
         gulp.src('build/Release/**/*')
             .pipe(gulp.dest('C:/inetpub/www/TestSite'));
     }
