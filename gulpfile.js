@@ -71,3 +71,14 @@ gulp.task('default', [
 	'copy-pages',
     'watch'
 ]);
+
+gulp.task('deploy-to-iis', [
+        'compile-minify-scss', 
+        'minify-js', 
+        'compile-typescript', 
+        'copy-pages'
+    ],function () {
+        gulp.src('build/Release/**/*')
+            .pipe(gulp.dest('C:/inetpub/www/TestSite'));
+    }
+);
