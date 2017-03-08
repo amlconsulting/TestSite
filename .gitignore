@@ -45,4 +45,5 @@ jspm_packages
 #Ignore the VS project files
 *.njsproj
 .vs
-.sln
+*.sln
+obj
