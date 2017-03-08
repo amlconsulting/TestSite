@@ -1,8 +1,17 @@
 'use strict';
 
-var express = require('express');
-var app = express();
+var dotenv = require('dotenv').config();
 
-app.get('/', function(request, response) {
-   response.send('index';) 
+var mongo = require('mongodb').MongoClient,
+    assert = require('assert');
+
+var url = 'mongodb://' + process.env.DATABASE_HOST + ':' + process.env.DATABASE_PORT + '/' + process.env.DATABASE_NAME;
+
+console.log("Connecting to " + url);
+
+mongo.connect(url, function(err, db) {
+    assert.equal(null, err);
+    console.log("Connected successfully to server");
+    
+    db.close();
 });
